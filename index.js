@@ -1,4 +1,3 @@
-
 class Account {
   constructor(username) {
     this.username = username;
@@ -31,7 +30,6 @@ class Transaction {
     this.account.addTransaction(this);
     return true;
   }
-
 }
 
 class Deposit extends Transaction {
@@ -43,7 +41,6 @@ class Deposit extends Transaction {
   isAllowed() {
     return true
   }
-
 }
 
 class Withdrawal extends Transaction {
@@ -55,13 +52,7 @@ class Withdrawal extends Transaction {
   isAllowed() {
     return (this.account.balance - this.amount >= 0);
   }
-
 }
-
-
-
-
-
 
 // DRIVER CODE BELOW
 // We use the code below to "drive" the application logic above and make sure it's working as expected
